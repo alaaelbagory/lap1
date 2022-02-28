@@ -1,5 +1,4 @@
-interface ICategory
-{
-    ID:number;
-    Name:string;
+export interface ICategory{
+    id:number;
+    name:string;
 }

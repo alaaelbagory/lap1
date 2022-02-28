@@ -1,8 +1,8 @@
-interface IProduct
-{
-    ID:number;
-    Name:string;
-    Quantity:number;
-    Price:number;
-    Img:string;
+export interface IProduct{
+    Id:number;
+    name:string;
+    quentity:number;
+    price:number;
+    img:string;
+
 }
