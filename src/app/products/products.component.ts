@@ -12,26 +12,45 @@ export class ProductsComponent implements OnInit {
 
   storName:string;
   StoreLogo:string;
-   ProductList:Array<IProduct>=[];
-   CategoryList:Array<ICategory>=[];
-  NoDiscount=DiscountOffers.pres_10;
-  ClientName:string="";
-  IsPurshased:boolean=false;
+  ProductList:Array<IProduct>=[
+    {Id:1,name:"samsung",quentity:12,price:200,img:"./assets/image/1.jpg",pres:DiscountOffers.pres_10},
+    {Id:2,name:"dress",quentity:12,price:200,img:"./assets/image/1.jpg",pres:DiscountOffers.pres_10},
+    {Id:3,name:"ring",quentity:12,price:200,img:"./assets/image/1.jpg",pres:DiscountOffers.pres_10}
+    ];
+  CategoryList:Array<ICategory>=[
+     {id:1,name:"smartphones"},
+     {id:2,name:"clotheses"},
+     {id:3,name:"acsesories"}
+    ];
+  Discount=DiscountOffers.pres_10;
+  no=DiscountOffers.Nodis;
+  ClientName:any="";
+  IsPurshased:boolean=true;
+  CategorySelected:string="";
+
+  oneProduct:Array<IProduct>=[
+    {Id:1,name:"samsung",quentity:12,price:200,img:"./assets/image/1.jpg", pres:DiscountOffers.pres_10},
+   
+   
+  ];
 
 
-   p1:IProduct={Id:1,name:"samsung",quentity:12,price:200,img:"image/1.jpg"};
-   c1:ICategory={id:2,name:"smartphones"};
-
+  isPurchasedChange()
+  {
+      if(this.IsPurshased==false){
+        this.IsPurshased=true;
+      }
+  }
 
 
   constructor(){
 
-     this.NoDiscount= DiscountOffers.pres_15;
+     this.Discount= DiscountOffers.pres_15;
      this.storName="Hopla";
-     this.ProductList.push(this.p1);
-     this.CategoryList.push(this.c1);
+    //  this.ProductList.push(this.p1);
+    //  this.CategoryList.push(this.c1);
      this.StoreLogo="image/1.jpg";
-     this.ClientName="Alaa Gehad";
+     //this.ClientName="Alaa Gehad";
    }
   ngOnInit(): void {
   }
