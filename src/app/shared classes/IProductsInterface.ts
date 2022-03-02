@@ -4,6 +4,6 @@ export interface IProduct{
     name:string;
     quentity:number;
     price:number;
-    img:string;
+
     pres:DiscountOffers
 }
