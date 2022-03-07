@@ -15,14 +15,12 @@ export class AppComponent {
   viewItems(){
 
     this.products?.renderValues();
-    this.productsList=this.products?.productList??[];
-    
+    this.productsList=this.products?.ProductList;
+
     if(!this.isClicked)
     this.isClicked=true;
     else
     this.isClicked=false;
-    
-   
    }
 
   

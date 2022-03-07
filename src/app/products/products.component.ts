@@ -3,7 +3,7 @@ import { ProductServiceService } from '../services/product-service.service';
 import { DiscountOffers } from '../shared classes/Discount';
 import { ICategory } from '../shared classes/ICategoryInterface';
 import { IProduct } from '../shared classes/IProductsInterface';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -47,7 +47,7 @@ export class ProductsComponent implements OnInit {
   }
 
 
-  constructor(private productService:ProductServiceService){
+  constructor(private productService:ProductServiceService,private router:Router){
 
      this.Discount= DiscountOffers.pres_15;
      this.storName="Hopla";
@@ -68,7 +68,12 @@ export class ProductsComponent implements OnInit {
   renderValues(){
     return this.productList=this.productService.GetAllProducts();
   }
-
+  navigate() {
+    this.router.navigate(["/product"]);
+  }
+  navigate2() {
+    this.router.navigate(["/product"]);
+  }
 }
 
 

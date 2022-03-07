@@ -6,8 +6,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms'
+import{HttpClientModule} from '@angular/common/http';
+import { FilterPipe } from './filter.pipe';
 
 import { ProductsComponent } from './products/products.component';
+import { PostsComponent } from './posts/posts.component';
+import { HomeComponent } from './home/home.component';
+import { UsersComponent } from './users/users.component';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -16,12 +24,20 @@ import { ProductsComponent } from './products/products.component';
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
+    PostsComponent,
+    HomeComponent,
+    UsersComponent,
+    LoginComponent,
+    PageNotFoundComponent,
+    RegisterComponent,
+    FilterPipe,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   //   NgbModule
   
     
